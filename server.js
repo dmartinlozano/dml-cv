@@ -20,11 +20,7 @@ app.use(function(req, res, next) {
 });
 
 //Model ========================================================================
-var cvSchema = mongoose.Schema({
-  id: String,
-  name: String
-}, { collection: 'dml' });
-
+var cvSchema = mongoose.Schema({}, { collection: 'dml' });
 var CV = mongoose.model('CV', cvSchema);
 
 //API ==========================================================================

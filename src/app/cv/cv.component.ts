@@ -18,6 +18,8 @@ export class CvComponent implements OnInit {
       result => {
           this.cvModel.id = result.cv.id;
           this.cvModel.name = result.cv.name;
+          this.cvModel.email = result.cv.email;
+          this.cvModel.profession = result.cv.profession;
         },
         error => {
           console.log(error);

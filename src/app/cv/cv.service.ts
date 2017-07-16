@@ -11,7 +11,7 @@ export class CVService {
 
   //Method to access to back with API Rest. Return the response
   getCV(id): Observable<any> {
-    return this.http.get('http://localhost:8080/cv/dml').map(response => response.json());
+    return this.http.get('http://localhost:8080/cv/'+id).map(response => response.json());
   }
 
 }
