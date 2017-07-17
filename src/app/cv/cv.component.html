@@ -15,29 +15,29 @@
           <div class="card blue left-align">
               <ul class="collection">
                 <li class="collection-item blue">
-                    <i class="fa fa-envelope"></i>&nbsp;
+                    <i class="fa fa-envelope icon20" ></i>&nbsp;
                     <a href="mailto: {{ cvModel.email }}" class="white-text">{{ cvModel.email }}</a>
                 </li>
                 <li class="collection-item blue" >
-                  <i class="fa fa-map-marker"></i>
+                  <i class="fa fa-map-marker icon20"></i>
                   <div class="white-text" style="margin-left:20px">{{ cvModel.address }}</div><p>
                   <div class="white-text" style="margin-left:20px">{{ cvModel.city }}</div><p>
                   <div class="white-text" style="margin-left:20px">{{ cvModel.zip }}</div>
                 </li>
                 <li class="collection-item blue">
-                  <i class="fa fa-phone"></i>&nbsp;
+                  <i class="fa fa-phone icon20"></i>&nbsp;
                   <a href="tel:{{ cvModel.mobile }}" class="white-text">{{ cvModel.mobile }}</a>
                 </li>
                 <li class="collection-item blue">
-                  <i class="fa fa-linkedin"></i>&nbsp;
+                  <i class="fa fa-linkedin icon20"></i>&nbsp;
                   <a href="{{ cvModel.linkedin }}" target="_blank" class="white-text">{{ cvModel.linkedinShort }}</a>
                 </li>
                 <li class="collection-item blue">
-                  <i class="fa fa-github"></i>&nbsp;
+                  <i class="fa fa-github icon20"></i>&nbsp;
                   <a href="{{ cvModel.github }}" target="_blank" class="white-text">{{ cvModel.github }}</a>
                 </li>
                 <li class="collection-item blue">
-                  <i class="fa fa-twitter"></i>&nbsp;
+                  <i class="fa fa-twitter icon20"></i>&nbsp;
                   <a href="{{ cvModel.twitter }}" target="_blank" class="white-text">{{ cvModel.twitterShort }}</a>
                 </li>
               </ul>
@@ -47,7 +47,7 @@
           <div class="card blue left-align" *ngFor="let edu of cvModel.education">
             <div class="card-content">
               <div class="container-block-title ">
-                <i class="fa fa-graduation-cap"></i>
+                <i class="fa fa-graduation-cap icon20"></i>
               </div>
               <div class="item"  style="margin-left:20px">
                   <div class="white-text" style="font-size: 20px">{{edu.title}}</div>
