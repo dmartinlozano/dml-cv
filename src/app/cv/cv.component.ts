@@ -1,17 +1,12 @@
 import { Component, NgModule, OnInit } from '@angular/core';
 import { CVService} from './cv.service';
 import { CVModel} from './cv.model';
-import { ReversePipe } from './cv.pipe';
 
 @Component({
   selector: 'cv',
   templateUrl: './cv.component.html',
   styleUrls: ['./cv.component.css'],
-  providers: [CVService, ReversePipe]
-})
-
-@NgModule({
-  declarations: [ ReversePipe ]
+  providers: [CVService]
 })
 
 export class CvComponent implements OnInit {
@@ -37,7 +32,7 @@ export class CvComponent implements OnInit {
           this.cvModel.twitter = result.cv.twitter;
           this.cvModel.twitterShort = result.cv.twitterShort;
           this.cvModel.education = result.cv.education;
-          this.cvModel.workExperience = result.cv.workExperience;
+          this.cvModel.workExperience = result.cv.workExperience.slice().reverse();
         },
         error => {
           console.log(error);
