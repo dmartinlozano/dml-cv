@@ -1,12 +1,17 @@
 import { Component, NgModule, OnInit } from '@angular/core';
 import { CVService} from './cv.service';
 import { CVModel} from './cv.model';
+import { ReversePipe } from './cv.pipe';
 
 @Component({
   selector: 'cv',
   templateUrl: './cv.component.html',
   styleUrls: ['./cv.component.css'],
-  providers: [CVService]
+  providers: [CVService, ReversePipe]
+})
+
+@NgModule({
+  declarations: [ ReversePipe ]
 })
 
 export class CvComponent implements OnInit {
