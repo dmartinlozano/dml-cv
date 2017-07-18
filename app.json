@@ -1,9 +1,9 @@
 {
-  "name": "MEAN Contact List",
-  "description": "Example contact list app using MEAN",
+  "name": "CV de David Martín Lozano",
+  "description": "CV de David Martín Lozano",
   "keywords": [
     "MEAN",
-    "Angular",
+    "Angular2",
     "Node",
     "MongoDB",
     "mLab"

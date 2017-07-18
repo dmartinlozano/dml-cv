@@ -20,9 +20,6 @@ export class CvComponent implements OnInit {
           this.cvModel.name = result.cv.name;
           this.cvModel.email = result.cv.email;
           this.cvModel.profession = result.cv.profession;
-          this.cvModel.birthDate = result.cv.birthDate;
-          this.cvModel.address = result.cv.address;
-          this.cvModel.mobile = result.cv.mobile;
           this.cvModel.city = result.cv.city;
           this.cvModel.zip = result.cv.zip;
           this.cvModel.email = result.cv.email;
