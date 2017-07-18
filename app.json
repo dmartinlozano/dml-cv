@@ -1,0 +1,22 @@
+{
+  "name": "CV de David Martín Lozano",
+  "description": "CV de David Martín Lozano",
+  "keywords": [
+    "MEAN",
+    "Angular2",
+    "Node",
+    "MongoDB",
+    "mLab"
+  ],
+  "repository": "https://github.com/dmartinlozano/dml-cv",
+  "success_url": "/",
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+    "mongolab"
+  ]
+}

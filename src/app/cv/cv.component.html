@@ -1,0 +1,86 @@
+	<div class="row">
+				<div class="col-md-4">
+          <!--Image and footer-->
+          <div class="card">
+           <div class="card-image blue">
+             <img src="assets/images/yo-2.jpeg">
+           </div>
+           <div class="card-content blue white-text right-align">
+             <h4>{{ cvModel.name }}</h4>
+             <h5>{{ cvModel.profession }}</h5>
+            </div>
+          </div>
+
+          <!--Contact-->
+          <div class="card blue left-align">
+              <ul class="collection">
+                <li class="collection-item blue">
+                    <i class="fa fa-envelope icon20" ></i>&nbsp;
+                    <a href="mailto: {{ cvModel.email }}" class="white-text">{{ cvModel.email }}</a>
+                </li>
+                <li class="collection-item blue" >
+                  <i class="fa fa-map-marker icon20"></i>
+                  <div class="white-text" style="margin-left:20px">{{ cvModel.city }}</div><p>
+                  <div class="white-text" style="margin-left:20px">{{ cvModel.zip }}</div>
+                </li>
+                <li class="collection-item blue">
+                  <i class="fa fa-linkedin icon20"></i>&nbsp;
+                  <a href="{{ cvModel.linkedin }}" target="_blank" class="white-text">{{ cvModel.linkedinShort }}</a>
+                </li>
+                <li class="collection-item blue">
+                  <i class="fa fa-github icon20"></i>&nbsp;
+                  <a href="{{ cvModel.github }}" target="_blank" class="white-text">{{ cvModel.github }}</a>
+                </li>
+                <li class="collection-item blue">
+                  <i class="fa fa-twitter icon20"></i>&nbsp;
+                  <a href="{{ cvModel.twitter }}" target="_blank" class="white-text">{{ cvModel.twitterShort }}</a>
+                </li>
+              </ul>
+          </div>
+
+          <!--Education-->
+          <div class="card blue left-align" *ngFor="let edu of cvModel.education">
+            <div class="card-content">
+              <div class="container-block-title ">
+                <i class="fa fa-graduation-cap icon20"></i>
+              </div>
+              <div class="item"  style="margin-left:20px">
+                  <div class="white-text" style="font-size: 20px">{{edu.title}}</div>
+                  <div class="white-text">{{edu.site}}</div>
+                  <div class="white-text">{{edu.duration}}</div>
+              </div>
+            </div>
+          </div>
+
+				</div>
+				<div class="card col-md-8">
+          <div class="custom-content">
+            <h3><i class="fa fa-suitcase" style="font-size:50px; margin-top:5px"></i>&nbsp;&nbsp;Experiencia laboral</h3>
+            <div class="card left-align" *ngFor="let we of cvModel.workExperience">
+                    <div class="card-content" >
+
+                        <h5>{{we.resume}}</h5>
+                        <div>
+                            <i class="fa fa-calendar" aria-hidden="true"></i>   {{we.initDate | date:'MM-yyyy'}}
+														&nbsp;&nbsp;
+                            <i class="fa fa-calendar" aria-hidden="true"></i>   {{we.endDate | date:'MM-yyyy'}}
+                        </div>
+
+                        <div><label class="blue-text">Empresa:</label>    {{we.company}}</div>
+                        <div><label class="blue-text">Cliente:</label>    {{we.client}}</div>
+
+												<div [innerHTML]="we.description"></div>
+
+                        <div style="margin-top:10px" *ngIf="we.technologies.length > 0">
+													<label class="blue-text">Tecnologías:</label>
+													<span class="chip" *ngFor="let tec of we.technologies">{{tec}}</span>
+												</div>
+												<div style="margin-top:10px" *ngIf="we.frameworks.length > 0">
+													<label class="blue-text">Frameworks:</label>
+													<span class="chip" *ngFor="let fra of we.frameworks">{{fra}}</span>
+												</div>
+                    </div>
+                </div>
+          </div>
+				</div>
+	</div>
