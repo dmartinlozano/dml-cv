@@ -1,4 +1,7 @@
 
 # David Martín Lozano's CV
 
-This is a simple project of NODE and Angular2 deployed in Heroku.
+vCard done with NODE, Angular2 and materialcss deployed in Heroku.
+
+
+<https://dml-cv.herokuapp.com/>
