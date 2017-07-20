@@ -1,11 +1,13 @@
 import { browser, element, by } from 'protractor';
 
-export class MeanContactlistAngular2Page {
+export class DmlCvPage {
+
   navigateTo() {
-    return browser.get('/');
+    browser.driver.manage().window().maximize();
+    return browser.get('https://dml-cv.herokuapp.com/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  getName() {
+    return element(by.id('name')).getText();
   }
 }

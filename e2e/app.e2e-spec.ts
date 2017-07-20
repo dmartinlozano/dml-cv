@@ -1,14 +1,14 @@
-import { MeanContactlistAngular2Page } from './app.po';
+import { DmlCvPage } from './app.po';
 
-describe('dml-cv App', () => {
-  let page: MeanContactlistAngular2Page;
+describe('DML CV App', () => {
+  let page: DmlCvPage;
 
   beforeEach(() => {
-    page = new MeanContactlistAngular2Page();
+    page = new DmlCvPage();
   });
 
-  it('should display message saying app works', () => {
+  it('The name of CV is ok', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect<any>(page.getName()).toEqual('David Martín Lozano');
   });
 });
