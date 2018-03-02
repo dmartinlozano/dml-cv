@@ -6,3 +6,16 @@
   font-size: 15px;
   color: white
 }
+page[size="A4"] {
+  .photo{
+      width:213000px;
+  }
+  .chip{
+      font-size: 8px !important;
+  }
+}
+@media print {
+  body, page[size="A4"] {
+    margin: 0;
+  }
+}

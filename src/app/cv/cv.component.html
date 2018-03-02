@@ -1,9 +1,9 @@
 	<div class="row">
-				<div class="col-md-4">
+				<div class="col s4">
           <!--Image and footer-->
           <div class="card">
            <div class="card-image blue">
-             <img src="assets/images/yo-2.jpeg">
+             <img class="photo" src="assets/images/yo-2.jpeg">
            </div>
            <div class="card-content blue white-text right-align">
              <h4 id="name">{{ cvModel.name }}</h4>
@@ -53,34 +53,32 @@
           </div>
 
 				</div>
-				<div class="card col-md-8">
-          <div class="custom-content">
-            <h3><i class="fa fa-suitcase" style="font-size:50px; margin-top:5px"></i>&nbsp;&nbsp;Experiencia laboral</h3>
-            <div class="card left-align" *ngFor="let we of cvModel.workExperience">
-                    <div class="card-content" >
+				<div class="col s8 card">
+          <h3><i class="fa fa-suitcase" style="font-size:50px; margin-top:5px"></i>&nbsp;&nbsp;Experiencia laboral</h3>
+          <div class="card left-align" *ngFor="let we of cvModel.workExperience">
+          	<div class="card-content" >
 
-                        <h5>{{we.resume}}</h5>
-                        <div>
-                            <i class="fa fa-calendar" aria-hidden="true"></i>   {{we.initDate | date:'MMM-yyyy'}}
-														&nbsp;&nbsp;
-                            <i class="fa fa-calendar" aria-hidden="true"></i>   {{we.endDate | date:'MMM-yyyy'}}
-                        </div>
+              	<h5>{{we.resume}}</h5>
+              	<div>
+                  	<i class="fa fa-calendar" aria-hidden="true"></i>   {{we.initDate | date:'MMM-yyyy'}}
+										&nbsp;&nbsp;
+                  	<i class="fa fa-calendar" aria-hidden="true"></i>   {{we.endDate | date:'MMM-yyyy'}}
+              	</div>
 
-                        <div><label class="blue-text">Empresa:</label>    {{we.company}}</div>
-                        <div><label class="blue-text">Cliente:</label>    {{we.client}}</div>
+              	<div><label class="blue-text">Empresa:</label>    {{we.company}}</div>
+              	<div><label class="blue-text">Cliente:</label>    {{we.client}}</div>
 
-												<div [innerHTML]="we.description"></div>
+								<div [innerHTML]="we.description"></div>
 
-                        <div style="margin-top:10px" *ngIf="we.technologies.length > 0">
-													<label class="blue-text">Tecnologías:</label>
-													<span class="chip" *ngFor="let tec of we.technologies">{{tec}}</span>
-												</div>
-												<div style="margin-top:10px" *ngIf="we.frameworks.length > 0">
-													<label class="blue-text">Frameworks:</label>
-													<span class="chip" *ngFor="let fra of we.frameworks">{{fra}}</span>
-												</div>
-                    </div>
-                </div>
+              	<div style="margin-top:10px" *ngIf="we.technologies.length > 0">
+									<label class="blue-text">Tecnologías:</label>
+									<span class="chip" *ngFor="let tec of we.technologies">{{tec}}</span>
+								</div>
+								<div style="margin-top:10px" *ngIf="we.frameworks.length > 0">
+									<label class="blue-text">Frameworks:</label>
+									<span class="chip" *ngFor="let fra of we.frameworks">{{fra}}</span>
+								</div>
+          	</div>
           </div>
 				</div>
 	</div>
